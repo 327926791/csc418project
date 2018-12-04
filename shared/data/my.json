@@ -1,0 +1,265 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 3,
+    "eye": [0.5,0, 20],
+    "up": [0,1,0],
+    "look": [0,0,-1],
+    "height": 1,
+    "width": 1.7777777778
+  },
+   "materials": [
+    {
+      "name": "red",
+      "ka": [0.02, 0.02, 0.02],
+      "kd": [0.8, 0.1, 0.2],
+      "ks": [0.8,0.8,0.8],
+      "km": [0.05,0.05,0.05],
+      "pa": [0.1,0.1,0.1],
+      "phong_exponent": 100,
+      "alpha": 1
+    },
+    {
+      "name": "orange plastic",
+      "ka": [0.1, 0.07, 0.02],
+      "kd": [1.0, 0.7, 0.2],
+      "ks": [0.8,0.8,0.8],
+      "km": [0.05,0.05,0.05],
+      "phong_exponent": 100,
+      "alpha": 1
+    },
+   {
+      "name": "yellow",
+      "ka": [0.01, 0.07, 0.02],
+      "kd": [0.2, 0.5, 0.2],
+      "ks": [0.8,0.8,0.8],
+      "km": [0.05,0.05,0.05],
+      "phong_exponent": 100,
+      "alpha": 1
+    },
+    {
+      "name": "Lambertian blue",
+      "ka": [0.02, 0.03, 0.08],
+      "kd": [0.2, 0.3, 0.8],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.2,0.2,0.2],
+      "phong_exponent": 20,
+      "alpha": 1
+    },
+    {
+      "name": "black blue",
+      "ka": [0.02, 0.03, 0.08],
+      "kd": [0.01, 0.01, 0.5],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.2,0.2,0.2],
+      "phong_exponent": 20,
+      "alpha": 1
+    },
+    {
+      "name": "purple metal",
+      "ka": [0.0596078,0.0305882,0.0639216],
+      "kd": [0.596078,0.305882,0.639216],
+      "ks": [0.596078,0.305882,0.639216],
+      "km": [0.596078,0.305882,0.639216],
+      "phong_exponent": 200,
+      "alpha": 1
+    },
+   {
+      "name": "green metal",
+      "ka": [0.0301961,0.0686275,0.0290196],
+      "kd": [0.301961,0.686275,0.290196],
+      "ks": [0.301961,0.686275,0.290196],
+      "km": [0.301961,0.686275,0.290196],
+      "phong_exponent": 2000,
+      "alpha": 1
+    },
+   {
+      "name": "white",
+      "ka": [0.0301961,0.0686275,0.0290196],
+      "kd": [0.901961,0.986275,0.90196],
+      "ks": [0.301961,0.686275,0.290196],
+      "km": [0.301961,0.686275,0.290196],
+      "phong_exponent": 2000,
+      "alpha": 1
+    },
+   {
+      "name": "matte gray",
+      "ka": [0.09, 0.09, 0.09],
+      "kd": [0.95, 0.95, 0.95],
+      "ks": [0.3,0.3,0.3],
+      "km": [0.05,0.05,0.05],
+      "phong_exponent": 200,
+      "alpha": 1
+    }
+  ],
+  "lights":[
+    {
+      "type": "point",
+      "position": [-10,20,10],
+      "color": [0.8,0.8,0.8]
+    },
+    {
+      "type": "directional",
+      "direction": [0,0,-1],
+      "color": [0.8,0.8,0.8]
+    }
+  ],
+
+ "objects":[
+    {
+      "type": "sphere",
+      "material": "green metal",
+      "center": [5,2.75,-5],
+      "radius": 0.5,
+      "texture":"../../shared/data/moon1.png"
+    },
+    {
+      "type": "sphere",
+      "material": "green metal",
+      "center": [2,2,1],
+      "radius": 0.8,
+      "texture":"../../shared/data/earth.png"
+    },
+   {
+      "type": "plane",
+      "material": "Lambertian blue",
+      "point": [0, -2, -10],
+      "normal":[0, 0, 1],
+      "texture":"../../shared/data/star.png"
+    },
+   {
+      "type": "plane",
+      "material": "purple metal",
+      "point": [0, -2, 0],
+      "normal":[0, 1, 0],
+      "texture":"../../shared/data/plane1.png"
+    },
+   {
+      "type": "cylinder",
+      "material": "orange plastic",
+      "top center": [-1, -0.36, -1],
+      "bottom center": [-1,-0.4,-1],
+      "radius": 0.6,
+      "texture": "NULL"
+    },
+   {
+      "type": "cylinder",
+      "material": "purple metal",
+      "top center": [-1, -0.3, -1],
+      "bottom center": [-1,-0.34,-1],
+      "radius": 0.8,
+      "texture": "NULL"
+    },
+   {
+      "type": "cylinder",
+      "material": "orange plastic",
+      "top center": [-1, -0.15, -1],
+      "bottom center": [-1,-0.25,-1],
+      "radius": 1,
+      "texture": "NULL"
+    },
+   {
+      "type": "cylinder",
+      "material": "orange plastic",
+      "top center": [-1, 0, -1],
+      "bottom center": [-1,-0.1,-1],
+      "radius": 1.2,
+      "texture": "../../shared/data/boat.png"
+    },
+    {
+      "type": "sphere",
+      "material": "white",
+      "center": [-1,0,-1],
+      "radius": 0.5,
+      "texture":"../../shared/data/station.png"
+    },
+   {
+      "type": "box",
+      "material": "green metal",
+      "left-bottom": [-4.45, -2, -0.45],
+      "right-top":[-3.55, -1.5, 0.55],
+      "texture":"../../shared/data/cube2.png"
+    },
+   {
+      "type": "box",
+      "material": "green metal",
+      "left-bottom": [-5, -1.5, -1],
+      "right-top":[-3, -1, 1],
+      "texture":"../../shared/data/cube2.png"
+    },
+   {
+      "type": "cylinder",
+      "material": "orange plastic",
+      "top center": [-4, 2, -3],
+      "bottom center": [-4.5,2,-3],
+      "radius": 0.3,
+      "texture": "../../shared/data/pole.png"
+    },
+   {
+      "type": "cylinder",
+      "material": "orange plastic",
+      "top center": [-3.9, 2, -3],
+      "bottom center": [-4.7,2,-3],
+      "radius": 0.05,
+      "texture": "../../shared/data/pole.png"
+    },
+   {
+      "type": "box",
+      "material": "green metal",
+      "left-bottom": [-4.7, 1.5, -3.05],
+      "right-top":[-4.6, 2.5, -2.95],
+      "texture":"../../shared/data/pole1.png"
+    },
+   {
+      "type": "box",
+      "material": "green metal",
+      "left-bottom": [-4.7, 1.95, -3.5],
+      "right-top":[-4.6, 2.05, -2.5],
+      "texture":"../../shared/data/pole1.png"
+    },
+   {
+      "type": "box",
+      "material": "Lambertian blue",
+      "left-bottom": [-3.9, 1.5, -3.05],
+      "right-top":[-3.8, 2.5, -2.95],
+      "texture":"../../shared/data/pole1.png"
+    },
+   {
+      "type": "box",
+      "material": "Lambertian blue",
+      "left-bottom": [-3.9, 1.95, -3.5],
+      "right-top":[-3.8, 2.05, -2.5],
+      "texture":"../../shared/data/pole1.png"
+    },
+    {
+      "type": "soup",
+      "material": "matte gray",
+      "obj": "../../shared/data/zero_body.obj",
+      "texture":"../../shared/data/AssassinBody_Dif.png"
+    },
+    {
+      "type": "soup",
+      "material": "matte gray",
+      "obj": "../../shared/data/zero_hand.obj",
+      "texture":"../../shared/data/AssassinHands_Dif.png"
+    },
+    {
+      "type": "soup",
+      "material": "matte gray",
+      "obj": "../../shared/data/zero_kunai.obj",
+      "texture":"../../shared/data/AssassinsKunai_Dif.png"
+    },
+    {
+      "type": "soup",
+      "material": "matte gray",
+      "obj": "../../shared/data/zero_Melee.obj",
+      "texture":"../../shared/data/PlayerMelee_Dif.png"
+    },
+    {
+      "type": "soup",
+      "material": "matte gray",
+      "obj": "../../shared/data/zero_head.obj",
+      "texture":"../../shared/data/AssassinHead_Dif.png"
+    }
+  ]
+}
